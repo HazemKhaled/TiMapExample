@@ -1,5 +1,7 @@
 function doClick(e) {
-    alert($.label.text);
+	alert($.label.text);
 }
+
+$.map.addAnnotation($.hq);
 
 $.index.open();

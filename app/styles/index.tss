@@ -1,5 +1,5 @@
 ".container": {
-	backgroundColor:"white"
+	backgroundColor: "white"
 }
 
 "Label": {
@@ -8,19 +8,19 @@
 	color: "#000"
 }
 
-"#hq" : {
-    latitude: 37.390749,
-    longitude: -122.081651,
-    title: "Appcelerator Headquarters ",
-    subtitle: "Mountain View, CA",
-    pincolor: Alloy.Globals.Map.ANNOTATION_RED
+"#hq": {
+	latitude: 37.390749,
+	longitude: -122.081651,
+	title: "Appcelerator Headquarters ",
+	subtitle: "Mountain View, CA",
+	pincolor: Alloy.Globals.Map.ANNOTATION_RED
 }
 
 "#map": {
-	region : {
-        latitude:33.74511,
-        longitude:-84.38993,
-        latitudeDelta:0.01,
-        longitudeDelta:0.01
-    }
+	region: {
+		latitude: 37.390749,
+		longitude: -122.081651,
+		latitudeDelta: 0.01,
+		longitudeDelta: 0.01
+	}
 }
