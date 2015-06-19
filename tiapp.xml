@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+    <property name="com-appcelerator-apm-id" type="string">554f3d807365f84f7d3d71c0</property>
+    <property name="acs-api-key-production" type="string">Xfe0AojFtlalrud82FRBtWXjRFdbn4YQ</property>
+    <property name="acs-authbase-url" type="string">https://secure-identity.cloud.appcelerator.com</property>
+    <property name="acs-base-url" type="string">https://api.cloud.appcelerator.com</property>
+    <property name="acs-api-key-development" type="string">yeszYsntbdEwf2JQMshBkvGRVYLwhbct</property>
+    <id>com.iti.training.map</id>
+    <name>maptest</name>
+    <version>1.0</version>
+    <publisher>hazemkhaled</publisher>
+    <url>http://</url>
+    <description>undefined</description>
+    <copyright>2015 by hazemkhaled</copyright>
+    <icon>appicon.png</icon>
+    <fullscreen>false</fullscreen>
+    <navbar-hidden>false</navbar-hidden>
+    <analytics>true</analytics>
+    <guid>1969eadc-a861-44e8-8696-8e88be52358f</guid>
+    <property name="ti.ui.defaultunit" type="string">dp</property>
+    <ios>
+        <plist>
+            <dict>
+                <key>UISupportedInterfaceOrientations~iphone</key>
+                <array>
+                    <string>UIInterfaceOrientationPortrait</string>
+                </array>
+                <key>UISupportedInterfaceOrientations~ipad</key>
+                <array>
+                    <string>UIInterfaceOrientationPortrait</string>
+                    <string>UIInterfaceOrientationPortraitUpsideDown</string>
+                    <string>UIInterfaceOrientationLandscapeLeft</string>
+                    <string>UIInterfaceOrientationLandscapeRight</string>
+                </array>
+                <key>UIRequiresPersistentWiFi</key>
+                <false/>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+                <key>UIStatusBarHidden</key>
+                <false/>
+                <key>UIStatusBarStyle</key>
+                <string>UIStatusBarStyleDefault</string>
+                <key>CFBundleURLTypes</key>
+                <array>
+                    <dict>
+                        <key>CFBundleTypeRole</key>
+                        <string>Editor</string>
+                        <key>CFBundleURLName</key>
+                        <string>com.iti.training.map</string>
+                        <key>CFBundleURLSchemes</key>
+                        <array>
+                            <string>touchtest-maptest</string>
+                        </array>
+                    </dict>
+                </array>
+            </dict>
+        </plist>
+    </ios>
+    <android xmlns:android="http://schemas.android.com/apk/res/android">
+        <manifest>
+            <uses-sdk android:targetSdkVersion="21"/>
+            <!-- Allows the API to download data from Google Map servers -->
+            <uses-permission android:name="android.permission.INTERNET"/>
+            <!-- Allows the API to cache data -->
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+            <!-- Use GPS for device location -->
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+            <!-- Use Wi-Fi or mobile connection for device location -->
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+            <!-- Allows the API to access Google web-based services -->
+            <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+            <!-- Specify OpenGL ES 2.0 as a requirement -->
+            <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+            <!-- Replace <com.domain.appid> with your application ID -->
+            <uses-permission android:name="com.iti.training.map.permission.MAPS_RECEIVE"/>
+            <permission
+                android:name="com.iti.training.map.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
+            <application android:theme="@style/materialTheme">
+                <!-- Replace "PASTE YOUR GOOGLE MAPS API KEY HERE" with the Google API key you obtained -->
+                <meta-data
+                    android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyAWmN69jZlTzI9v5_yBho6HF1stzOH0Yzs"/>
+            </application>
+        </manifest>
+    </android>
+    <mobileweb>
+        <precache/>
+        <splash>
+            <enabled>true</enabled>
+            <inline-css-images>true</inline-css-images>
+        </splash>
+        <theme>default</theme>
+    </mobileweb>
+    <modules>
+        <module platform="android">com.appcelerator.apm</module>
+        <module platform="commonjs">ti.cloud</module>
+        <module platform="iphone">com.appcelerator.apm</module>
+        <module platform="iphone">ti.map</module>
+        <module platform="android">ti.map</module>
+    </modules>
+    <deployment-targets>
+        <target device="android">true</target>
+        <target device="blackberry">true</target>
+        <target device="ipad">true</target>
+        <target device="iphone">true</target>
+        <target device="mobileweb">true</target>
+    </deployment-targets>
+    <sdk-version>4.0.0.GA</sdk-version>
+    <plugins>
+        <plugin version="1.0">ti.alloy</plugin>
+        <plugin>com.soasta.touchtest.android</plugin>
+    </plugins>
+    <property name="com-soasta-touchtest-version" type="string">7732.159</property>
+    <property name="com-soasta-touchtest-ios-appId" type="string">360000</property>
+</ti:app>
