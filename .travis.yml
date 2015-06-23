@@ -12,9 +12,7 @@
 
     install:
         - npm install -g titanium alloy gulp
-        - npm install
 
-        - titanium login hazem@eshtery.me 100100100
         - titanium sdk install latest --no-progress-bars
 
         - gulp 'install:android_sdk'
