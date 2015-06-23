@@ -1,9 +1,12 @@
     language: objective-c
 
+    notifications:
+        email:
+            - hazem.khaled@gmail.com
     env:
         matrix:
             - PLATFORM="ios"
-            - PLATFORM="android" ANDROID_VERSION="21"
+            - PLATFORM="android" ANDROID_VERSION="19"
 
     before_install:
         - export ANDROID_HOME=$PWD/android-sdk-macosx
@@ -11,9 +14,9 @@
         - export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 
     install:
-        - npm install -g titanium alloy tishadow
+        - npm install -g appcelerator titanium alloy tishadow gulp
         - npm install gulp underscore moment gulp-util xml2js cloudinary
-        - titanium sdk install latest --no-progress-bars
+        - appc ti sdk install latest --no-progress-bars
 
         - gulp 'install:android_sdk'
 
