@@ -1,4 +1,4 @@
-    language: objective-c 
+    language: objective-c
 
     env:
         matrix:
@@ -11,8 +11,7 @@
         - export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 
     install:
-        - npm install -g titanium alloy gulp
-
+        - npm install -g titanium alloy tishadow gulp underscore moment gulp-util xml2js cloudinary
         - titanium sdk install latest --no-progress-bars
 
         - gulp 'install:android_sdk'
@@ -21,6 +20,6 @@
         - gulp 'start:emulator'
         - gulp 'config:tiapp' --test
 
-    script: 
+    script:
         - gulp 'test:calabash'
         - gulp 'test:jasmine'
