@@ -1,8 +1,7 @@
 machine:
   xcode:
     version: "7.0"
-  node:
-    version: 0.12.7
 dependencies:
-  override:
+  pre:
     - npm install tisdk titanium alloy
+    - tisdk install 5.0.2.GA
