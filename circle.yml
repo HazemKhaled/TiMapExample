@@ -1,0 +1,8 @@
+machine:
+  xcode:
+    version: "7.0"
+  node:
+    version: 0.12.7
+dependencies:
+  override:
+    - npm install tisdk titanium alloy
