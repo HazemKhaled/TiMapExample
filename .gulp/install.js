@@ -38,7 +38,7 @@ module.exports = function (gulp, plugins) {
     gulp.task('install:configPath', ['install:getSDK'], function (done) {
         plugins.exec('titanium config android.sdkPath $ANDROID_HOME', function (err) {
             if (err) return plugins.utils.abort(err.message, done);
-            process.env.ANDROID_VERSION = process.env.ANDROID_VERSION || '19';
+            process.env.ANDROID_VERSION = process.env.ANDROID_VERSION || '21';
             plugins.utils.log(plugins.utils.colors.cyan.bold("Processing install for android " + process.env.ANDROID_VERSION));
             done();
         });
