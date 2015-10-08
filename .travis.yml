@@ -1,4 +1,4 @@
-language: android
+language: objective-c
 
 notifications:
     email:
@@ -6,6 +6,7 @@ notifications:
 
 env:
   matrix:
+    - PLATFORM="ios"
     - ANDROID_TARGET=android-21  ANDROID_ABI=armeabi-v7a
 
 android:
@@ -18,8 +19,13 @@ android:
     - addon-google_apis-google-21
 
 install:
+    - wget -q http://dl.google.com/android/ndk/android-ndk-r10e-linux-x86_64.bin
+    - chmod a+x android-ndk-r10e-linux-x86_64.bin
+    - ./android-ndk-r10e-linux-x86_64.bin
+    - mv android-ndk-r10e android-ndk
+
     - npm install -g tisdk titanium alloy
-    - tisdk install 5.0.2.GA
+    - tisdk build 5.0.2.GA
     - ti sdk select latest
 
 script:
